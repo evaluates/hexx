@@ -5,9 +5,7 @@
 [![Dependency Status](https://img.shields.io/gemnasium/nepalez/hexx.svg?style=flat)][gemnasium]
 [![Code Climate](https://img.shields.io/codeclimate/github/nepalez/hexx.svg?style=flat)][codeclimate]
 [![Coverage](https://img.shields.io/coveralls/nepalez/hexx.svg?style=flat)][coveralls]
-[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)][MIT LICENSE]
 
-[MIT LICENSE]: file:./LICENSE
 [codeclimate]: https://codeclimate.com/github/nepalez/hexx
 [coveralls]: https://coveralls.io/r/nepalez/hexx
 [gem]: https://rubygems.org/gems/hexx
@@ -122,7 +120,7 @@ Uses [RSpec] 3.0+ for testing and [hexx-suit] for dev/test tools collection.
 ## Contributing
 
 * Fork the project.
-* Read the [STYLEGUIDE].
+* Read the [STYLEGUIDE](config/metrics/STYLEGUIDE).
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
   future version unintentionally.
@@ -131,8 +129,6 @@ Uses [RSpec] 3.0+ for testing and [hexx-suit] for dev/test tools collection.
   in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-[STYLEGUIDE]: file:./config/metrics/STYLEGUIDE
-
 ## License
 
-See [MIT LICENSE].
+See the [MIT LICENSE](LICENSE).
