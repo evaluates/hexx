@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# Loads the development dependencies
+require "hexx-validators"
+
+# Command line runner
+class CLI < Thor
+
+  register(
+    Hexx::Validators::Generator,
+    "validator",
+    "validator NAME[ -e error[ error]][ -o option[ option]]",
+    "Scaffolds a custom validator. Run `hexx validator -h` for help."
+  )
+end
+
+# Starts cli with arguments taken from a command line
+CLI.start ARGV

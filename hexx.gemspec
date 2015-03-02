@@ -16,9 +16,12 @@ Gem::Specification.new do |s|
 
   s.require_paths    = ["lib"]
   s.files            = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
+  s.executables      = ["hexx"]
   s.test_files       = Dir["spec/**/*.rb"]
   s.extra_rdoc_files = Dir["README.md", "LICENSE", "config/metrics/STYLEGUIDE"]
 
   s.add_runtime_dependency "extlib", "~> 0.9"
   s.add_runtime_dependency "hexx-suit", "~> 0.0"
+
+  s.add_development_dependency "hexx-validators", "~> 0.0"
 end
