@@ -1,5 +1,8 @@
 ---
 language: ruby
 rvm:
-  - '2.1'
-  - '2.2'
+  - '2.0'
+  - ruby-head
+  - rbx-2 --2.0
+  - jruby-head-20mode
+  - jruby-head-21mode
