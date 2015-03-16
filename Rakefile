@@ -13,7 +13,7 @@ Bundler::GemHelper.install_tasks
 begin
   require "hexx-suit"
   Hexx::Suit.install_tasks
-rescue
+rescue LoadError
   require "hexx-rspec"
   Hexx::RSpec.install_tasks
 end
