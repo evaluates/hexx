@@ -2,6 +2,7 @@
 
 # Loads the development dependencies
 require "hexx-validators"
+require "policy/cli"
 
 # Command line runner
 class CLI < Thor
@@ -12,6 +13,14 @@ class CLI < Thor
     "validator NAME[ -e error[ error]][ -o option[ option]]",
     "Scaffolds a custom validator. Run `hexx validator -h` for help."
   )
+
+  register(
+    Policy::CLI,
+    "policy",
+    "policy NAME[ -a attribute[ attribute]][ -n namespace][ -l en ru]",
+    "Scaffolds a policy object. Run `hexx policy -h` for help."
+  )
+
 end
 
 # Starts cli with arguments taken from a command line
