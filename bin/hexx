@@ -4,8 +4,9 @@
 require "hexx-dependencies"
 require "hexx-validators"
 require "policy/cli"
+require "service_objects/cli"
 
-# Command line runner
+# Command line runne # class CLIr
 class CLI < Thor
 
   register(
@@ -27,6 +28,14 @@ class CLI < Thor
     "policy",
     "policy NAME[ -a attribute[ attribute]][ -n namespace][ -l en ru]",
     "Scaffolds a policy object. Run `hexx policy -h` for help."
+  )
+
+  register(
+    ServiceObjects::CLI,
+    "service",
+    "service NAME[ -d dependency][ -p param][ -n notification]" \
+    "[ -f folder][ -l ua]",
+    "Scaffolds a service object. Run `hexx service -h` for help."
   )
 
 end # class CLI

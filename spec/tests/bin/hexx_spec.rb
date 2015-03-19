@@ -2,6 +2,7 @@
 require "hexx-dependencies"
 require "hexx-validators"
 require "policy/cli"
+require "service_objects/cli"
 
 describe "$ hexx", :sandbox do
 
@@ -52,5 +53,15 @@ describe "$ hexx", :sandbox do
     end
 
   end # dependency
+
+  context "service" do
+
+    subject { :service }
+
+    it_behaves_like "running scaffolder", ServiceObjects::CLI do
+      let(:arguments) { %w(get_item -p name -n found:item -l ua) }
+    end
+
+  end # service
 
 end # describe $ hexx
