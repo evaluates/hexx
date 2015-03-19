@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
 
   gem.required_ruby_version = "~> 2.0"
   gem.add_runtime_dependency "hexx-validators", "~> 0.0", ">= 0.0.2"
+  gem.add_runtime_dependency "hexx-dependencies", "~> 0.0"
   gem.add_runtime_dependency "policy", "~> 1.2"
   gem.add_development_dependency "hexx-rspec", "~> 0.3"
 

@@ -1,4 +1,5 @@
 # encoding: utf-8
+require "hexx-dependencies"
 require "hexx-validators"
 require "policy/cli"
 
@@ -40,6 +41,16 @@ describe "$ hexx", :sandbox do
       let(:arguments) { %w(consistency -a debet credit -l en fr) }
     end
 
-  end # validator
+  end # policy
+
+  context "dependency" do
+
+    subject { :dependency }
+
+    it_behaves_like "running scaffolder", Hexx::Dependencies::CLI do
+      let(:arguments) { %w(user_model -g users -i user) }
+    end
+
+  end # dependency
 
 end # describe $ hexx

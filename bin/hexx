@@ -1,11 +1,19 @@
 #!/usr/bin/env ruby
 
 # Loads the development dependencies
+require "hexx-dependencies"
 require "hexx-validators"
 require "policy/cli"
 
 # Command line runner
 class CLI < Thor
+
+  register(
+    Hexx::Dependencies::CLI,
+    "dependency",
+    "dependency[ NAME][ -g gemname][ -i Injection]",
+    "Scaffolds a custom dependency. Run `hexx dependency -h` for help."
+  )
 
   register(
     Hexx::Validators::Generator,
@@ -21,7 +29,7 @@ class CLI < Thor
     "Scaffolds a policy object. Run `hexx policy -h` for help."
   )
 
-end
+end # class CLI
 
 # Starts cli with arguments taken from a command line
 CLI.start ARGV
