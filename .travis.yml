@@ -3,8 +3,7 @@ language: ruby
 bundler_args: --without metrics
 script: rake test:coverage:run
 rvm:
-  - '2.0'
+  - '2.1'
   - ruby-head
-  - rbx-2 --2.0
-  - jruby-head-20mode
+  - rbx-2 --2.1
   - jruby-head-21mode
