@@ -1,5 +1,6 @@
 # encoding: utf-8
 require "hexx-dependencies"
+require "hexx-domains"
 require "hexx-validators"
 require "policy/cli"
 require "service_objects/cli"
@@ -63,5 +64,15 @@ describe "$ hexx", :sandbox do
     end
 
   end # service
+
+  context "domain" do
+
+    subject { :domain }
+
+    it_behaves_like "running scaffolder", Hexx::Domains::CLI do
+      let(:arguments) { %w(gemname -u user -a Author -e email@example.com) }
+    end
+
+  end # domain
 
 end # describe $ hexx

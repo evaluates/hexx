@@ -2,12 +2,20 @@
 
 # Loads the development dependencies
 require "hexx-dependencies"
+require "hexx-domains"
 require "hexx-validators"
 require "policy/cli"
 require "service_objects/cli"
 
 # Command line runne # class CLIr
 class CLI < Thor
+
+  register(
+    Hexx::Domains::CLI,
+    "domain",
+    "domain NAME[ -a Author][ -u username][ -e email][ -r ruby][ -d][ -b][ -g]",
+    "Scaffolds new domain model. Run `hexx domain -h` for help."
+  )
 
   register(
     Hexx::Dependencies::CLI,

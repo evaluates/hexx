@@ -20,8 +20,9 @@ Gem::Specification.new do |gem|
   gem.extra_rdoc_files = Dir["README.md", "LICENSE"]
 
   gem.required_ruby_version = "~> 2.0"
-  gem.add_runtime_dependency "hexx-validators", "~> 0.0", ">= 0.0.2"
   gem.add_runtime_dependency "hexx-dependencies", "~> 0.0"
+  gem.add_runtime_dependency "hexx-domains", "~> 0.0"
+  gem.add_runtime_dependency "hexx-validators", "~> 0.0", ">= 0.0.2"
   gem.add_runtime_dependency "policy", "~> 1.2"
   gem.add_runtime_dependency "service_objects", "~> 0.1"
   gem.add_development_dependency "hexx-rspec", "~> 0.3"

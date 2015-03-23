@@ -5,5 +5,3 @@ script: rake test:coverage:run
 rvm:
   - '2.1'
   - ruby-head
-  - rbx-2 --2.1
-  - jruby-head-21mode
